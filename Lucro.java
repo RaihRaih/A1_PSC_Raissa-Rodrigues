@@ -11,28 +11,16 @@ public class Lucro {
   public void calcularMediaGastoPorCliente() {
     Scanner scanner = new Scanner(System.in);
 
-    while (true) {
-      System.out.println("\nDigite o número de clientes: ");
-      numeroClientes = scanner.nextInt();
-
-      if (numeroClientes <= 0) {
-        System.out.println("Número de clientes inválido!");
-        continue; // Volta para o início do loop se o número for negativo ou zero
-      } else {
-        break; // Sai do loop se o número for válido
-      }
-    }
-
     double totalGastosClientes = 0.0;
 
-    for (int i = 1; i <= numeroClientes; i++) {
-      System.out.println("Digite o número de bebidas que o cliente " + i + " comprou: ");
+    for (int i = 0; i < numeroClientes; i++) {
+      System.out.println("Digite o número de bebidas que o cliente " + (i + 1) + " comprou: ");
       int numBebidas = scanner.nextInt();
 
       System.out.println("Digite o preço da bebida: ");
       double precoBebida = scanner.nextDouble();
 
-      System.out.println("Digite o número de comidas que o cliente " + i + " comprou: ");
+      System.out.println("Digite o número de comidas que o cliente " + (i + 1) + " comprou: ");
       int numComidas = scanner.nextInt();
 
       System.out.println("Digite o preço da comida: ");
@@ -42,7 +30,7 @@ public class Lucro {
       totalGastosClientes += gastoCliente;
 
       double mediaCliente = gastoCliente / 2;
-      System.out.println("A média de gastos do cliente " + i + " é: " + mediaCliente);
+      System.out.println("A média de gastos do cliente " + (i + 1) + " é: " + mediaCliente);
     }
 
     scanner.close();
@@ -51,25 +39,13 @@ public class Lucro {
   public void calcularMediaGeral() {
     Scanner scanner = new Scanner(System.in);
 
-    while (true) {
-      System.out.println("\nDigite o número de clientes: ");
-      numeroClientes = scanner.nextInt();
-
-      if (numeroClientes <= 0) {
-        System.out.println("Número de clientes inválido!");
-        continue; // Volta para o início do loop se o número for negativo ou zero
-      } else {
-        break; // Sai do loop se o número for válido
-      }
-    }
-
     double totalGastos = 0.0;
 
-    for (int i = 0; i <= numeroClientes; i++) {
-      System.out.print("Quanto que o cliente " + i + " gastou em comidas: ");
+    for (int i = 0; i < numeroClientes; i++) {
+      System.out.print("Quanto que o cliente " + (i + 1) + " gastou em comidas: ");
       double comidas = scanner.nextDouble();
 
-      System.out.print("Quanto que o cliente " + i + " gastou em bebidas: ");
+      System.out.print("Quanto que o cliente " + (i + 1) + " gastou em bebidas: ");
       double bebidas = scanner.nextDouble();
 
       totalGastos += comidas + bebidas;
