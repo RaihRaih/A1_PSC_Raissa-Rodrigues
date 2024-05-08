@@ -11,6 +11,18 @@ public class Lucro {
   public void calcularMediaGastoPorCliente() {
     Scanner scanner = new Scanner(System.in);
 
+    while (true) {
+      System.out.println("\nDigite o número de clientes: ");
+      numeroClientes = scanner.nextInt();
+
+      if (numeroClientes <= 0) {
+        System.out.println("Número de clientes inválido!");
+        continue; // Volta para o início do loop se o número for negativo ou zero
+      } else {
+        break; // Sai do loop se o número for válido
+      }
+    }
+
     double totalGastosClientes = 0.0;
 
     for (int i = 1; i <= numeroClientes; i++) {
@@ -39,9 +51,21 @@ public class Lucro {
   public void calcularMediaGeral() {
     Scanner scanner = new Scanner(System.in);
 
+    while (true) {
+      System.out.println("\nDigite o número de clientes: ");
+      numeroClientes = scanner.nextInt();
+
+      if (numeroClientes <= 0) {
+        System.out.println("Número de clientes inválido!");
+        continue; // Volta para o início do loop se o número for negativo ou zero
+      } else {
+        break; // Sai do loop se o número for válido
+      }
+    }
+
     double totalGastos = 0.0;
 
-    for (int i = 1; i <= numeroClientes; i++) {
+    for (int i = 0; i <= numeroClientes; i++) {
       System.out.print("Quanto que o cliente " + i + " gastou em comidas: ");
       double comidas = scanner.nextDouble();
 
