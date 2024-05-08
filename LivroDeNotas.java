@@ -28,19 +28,19 @@ class LivroDeNotas {
 
     double somaMedias = 0;
 
-    for (int i = 1; i < numeroAlunos; i++) {
-      System.out.println("Nota da A1 para o aluno " + i + ": ");
+    for (int i = 0; i < numeroAlunos; i++) {
+      System.out.println("Nota da A1 para o aluno " + (i + 1) + ": ");
       double a1 = scanner.nextDouble();
-      System.out.println("Nota da A2 para o aluno " + i + ": ");
+      System.out.println("Nota da A2 para o aluno " + (i + 1) + ": ");
       double a2 = scanner.nextDouble();
-      System.out.println("Nota da A3 para o aluno " + i + ": ");
+      System.out.println("Nota da A3 para o aluno " + (i + 1) + ": ");
       double a3 = scanner.nextDouble();
 
       double media = (a1 + a2 + a3) / 3;
 
       somaMedias += media;
 
-      System.out.println("Media do aluno " + i + " foi: " + media);
+      System.out.println("Media do aluno " + (i + 1) + " foi: " + media);
     }
 
     double mediaGeral = somaMedias / numeroAlunos;
