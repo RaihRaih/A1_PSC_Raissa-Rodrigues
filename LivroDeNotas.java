@@ -19,7 +19,7 @@ class LivroDeNotas {
       numeroAlunos = scanner.nextInt();
 
       if (numeroAlunos <= 0) {
-        System.out.println("Numero invalido!");
+        System.out.println("\nNumero invalido!");
         continue; // Volta para o início do loop se o número for negativo ou zero
       } else {
         break; // Sai do loop se o número for válido
@@ -29,22 +29,22 @@ class LivroDeNotas {
     double somaMedias = 0;
 
     for (int i = 0; i < numeroAlunos; i++) {
-      System.out.println("Nota da A1 para o aluno " + (i + 1) + ": ");
+      System.out.println("\nNota da A1 para o aluno " + (i + 1) + ": ");
       double a1 = scanner.nextDouble();
-      System.out.println("Nota da A2 para o aluno " + (i + 1) + ": ");
+      System.out.println("\nNota da A2 para o aluno " + (i + 1) + ": ");
       double a2 = scanner.nextDouble();
-      System.out.println("Nota da A3 para o aluno " + (i + 1) + ": ");
+      System.out.println("\nNota da A3 para o aluno " + (i + 1) + ": ");
       double a3 = scanner.nextDouble();
 
       double media = (a1 + a2 + a3) / 3;
 
       somaMedias += media;
 
-      System.out.println("Media do aluno " + (i + 1) + " foi: " + media);
+      System.out.println("\nMedia do aluno " + (i + 1) + " foi: " + media);
     }
 
     double mediaGeral = somaMedias / numeroAlunos;
-    System.out.println("Media geral: " + mediaGeral);
+    System.out.println("\nMedia geral: " + mediaGeral);
 
     scanner.close();
   }
