@@ -1,3 +1,4 @@
+/*Raissa Rodrigues - Sistemas de Informação*/
 import java.util.Scanner;
 
 class LivroDeNotas {
